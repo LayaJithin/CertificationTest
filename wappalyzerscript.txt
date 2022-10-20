@@ -32,24 +32,24 @@ public class CertificationTest2_wapplyzer {
 		
 		driver.findElement(By.xpath("//*[@id=\"app\"]/div/main/div/div[1]/header/div/div/div/div[2]/button[2]/span")).click();
 		WebElement tec = driver.findElement(By.xpath("//*[@id=\"list-item-49\"]/div/div[1]"));
-         Actions act = new Actions(driver);
-         act.moveToElement(tec);
-         act.perform();
-         tec.click();
+                Actions act = new Actions(driver);
+                act.moveToElement(tec);
+                act.perform();
+                tec.click();
          
-       // To find a technology in search field
+            // To find a technology in search field
          
-         WebElement search = driver.findElement(By.xpath("//*[@id=\"app\"]/div/main/div/div[2]/div[2]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]"));
+             WebElement search = driver.findElement(By.xpath("//*[@id=\"app\"]/div/main/div/div[2]/div[2]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]"));
 	     JavascriptExecutor js = (JavascriptExecutor) driver;
 	     js.executeScript("arguments[0].scrollIntoView();",search);
-         search.sendKeys("raz");
-         Select name = new Select(search);
-         name.selectByValue("Razorpay");
-         search.submit();
+             search.sendKeys("raz");
+             Select name = new Select(search);
+             name.selectByValue("Razorpay");
+             search.submit();
          
          // To click on "create lead list"
      
-         driver.findElement(By.xpath("//*[@id=\"app\"]/div/main/div/div[2]/div[1]/div[2]/div[3]/div/div/a/span")).click();
+          driver.findElement(By.xpath("//*[@id=\"app\"]/div/main/div/div[2]/div[1]/div[2]/div[3]/div/div/a/span")).click();
          
        
 	}
@@ -58,6 +58,6 @@ public class CertificationTest2_wapplyzer {
 	public void browserClose()
 	{
 		driver.close();
-		
+	
 	}
 }
